@@ -12,10 +12,11 @@ export async function getDogs() {
 }
 
 export async function getDog(dogId) {
+    console.log(dogId);
     // from the dogs table, select a single dog who has the matching id
     const resp = await client.from('dogs').select('*').match({ id:dogId }).single();
+    console.log(resp.data);
     return resp.data;
 }
-    // and return the response
-getDog();
+
 
