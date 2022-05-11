@@ -11,10 +11,10 @@ const dogDetailEl = document.getElementById('dog-detail-container');
 
 async function loadData() {
     const params = new URLSearchParams(window.location.search);
-    console.log(params.id);
+    // console.log(params.id);
     //declaring your id 
     const id = params.get('id');
-    console.log(id);
+    // console.log(id);
     
     const dogs = await getDog(id);
 
